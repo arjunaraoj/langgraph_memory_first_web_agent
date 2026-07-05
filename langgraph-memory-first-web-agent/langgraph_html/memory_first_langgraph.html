@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory First LangGraph Workflow</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f6fa;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #222;
+        }
+
+        p {
+            color: #555;
+            font-size: 15px;
+        }
+
+        .mermaid {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+
+    <script type="module">
+        import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: "default",
+            securityLevel: "loose",
+            flowchart: {
+                curve: "linear"
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Memory First LangGraph Workflow</h1>
+
+        <p>
+            This diagram shows the flow of the Memory-First Web Agent:
+            guardrails, query embedding, Redis memory search, memory answer,
+            web fallback, web answer, and turn logging.
+        </p>
+
+        <pre class="mermaid">
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([&lt;p&gt;__start__&lt;/p&gt;]):::first
+	guardrails(guardrails)
+	embed_query(embed_query)
+	search_memory(search_memory)
+	answer_from_memory(answer_from_memory)
+	web_search_fetch_store(web_search_fetch_store)
+	answer_from_web(answer_from_web)
+	log_turn(log_turn)
+	__end__([&lt;p&gt;__end__&lt;/p&gt;]):::last
+	__start__ --&gt; guardrails;
+	answer_from_memory --&gt; log_turn;
+	answer_from_web --&gt; log_turn;
+	embed_query --&gt; search_memory;
+	guardrails -. &amp;nbsp;ok&amp;nbsp; .-&gt; embed_query;
+	guardrails -. &amp;nbsp;blocked&amp;nbsp; .-&gt; log_turn;
+	search_memory -. &amp;nbsp;hit&amp;nbsp; .-&gt; answer_from_memory;
+	search_memory -. &amp;nbsp;miss&amp;nbsp; .-&gt; web_search_fetch_store;
+	web_search_fetch_store --&gt; answer_from_web;
+	log_turn --&gt; __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
+
+        </pre>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Singapore Tourism Board Overview",
+    "text": "The Singapore Tourism Board, also known as STB, is the government agency responsible for supporting and developing Singapore's tourism sector. STB works with industry partners to market Singapore as a destination, improve visitor experiences, and support tourism businesses.",
+    "metadata": {
+      "source": "sample_seed_data",
+      "doc_type": "overview",
+      "topic": "organization_overview",
+      "url": "https://www.stb.gov.sg/about-stb/who-we-are/overview/"
+    }
+  },
+  {
+    "title": "STB Destination Marketing",
+    "text": "STB promotes Singapore internationally through destination branding, marketing campaigns, trade partnerships, and visitor experience initiatives. It works with travel partners, attractions, hotels, airlines, and event organizers.",
+    "metadata": {
+      "source": "sample_seed_data",
+      "doc_type": "marketing",
+      "topic": "destination_marketing",
+      "url": "https://www.stb.gov.sg/"
+    }
+  },
+  {
+    "title": "Passion Made Possible",
+    "text": "Passion Made Possible is Singapore's destination brand. It presents Singapore as a place where visitors can pursue their passions in areas such as food, culture, design, nature, wellness, and business events.",
+    "metadata": {
+      "source": "sample_seed_data",
+      "doc_type": "campaign",
+      "topic": "brand_campaign",
+      "url": "https://www.visitsingapore.com/"
+    }
+  },
+  {
+    "title": "Tourism Statistics",
+    "text": "Tourism statistics are used to understand visitor arrivals, tourism receipts, visitor profiles, hotel performance, and source markets. These metrics help tourism agencies and businesses understand performance and plan future initiatives.",
+    "metadata": {
+      "source": "sample_seed_data",
+      "doc_type": "statistics",
+      "topic": "tourism_statistics",
+      "url": "https://www.stb.gov.sg/content/stb/en/statistics-and-market-insights.html"
+    }
+  },
+  {
+    "title": "Business Events and MICE",
+    "text": "Singapore promotes itself as a business events destination for meetings, incentives, conferences, and exhibitions. STB supports industry partners to attract high-quality events and strengthen Singapore's position as a global business hub.",
+    "metadata": {
+      "source": "sample_seed_data",
+      "doc_type": "industry_segment",
+      "topic": "business_events",
+      "url": "https://www.visitsingapore.com/mice/"
+    }
+  },
+  {
+    "title": "Sustainable Tourism",
+    "text": "Sustainable tourism focuses on responsible travel, resource efficiency, community value, and long-term destination resilience. Singapore supports sustainable tourism through greener experiences, industry capability building, and responsible visitor engagement.",
+    "metadata": {
+      "source": "sample_seed_data",
+      "doc_type": "sustainability",
+      "topic": "sustainable_tourism",
+      "url": "https://www.stb.gov.sg/"
+    }
+  }
+]
