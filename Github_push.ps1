@@ -6,10 +6,10 @@ mkdir github-upload
 cd github-upload
 
 # 3. Clone your GitHub repo
-git clone https://github.com/arjunaraoj/memory_first_web_agent.git
+git clone https://github.com/arjunaraoj/langgraph_memory_first_web_agent.git
 
 # 4. Go inside cloned repo
-cd memory_first_web_agent
+cd langgraph_memory_first_web_agent
 
 # 5. Create folder inside GitHub repo
 mkdir langgraph-memory-first-web-agent
